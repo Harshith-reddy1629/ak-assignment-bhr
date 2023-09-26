@@ -10,6 +10,8 @@ To run project in your localhost:port run command<span style="color: lightgreen"
 
 now go to browser and enter URL http://localhost:3000
 
+OR you can visit my site by clicking this url [https://harshith-reddy1629.github.io/ak-assignment-bhr/](https://harshith-reddy1629.github.io/ak-assignment-bhr/)
+
 it will be display login page as below screenshot.
 
 i have used my custom approach ,similar to AdmitKard Official site.
