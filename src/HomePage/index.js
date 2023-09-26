@@ -76,7 +76,7 @@ class HomePage extends Component {
       console.log(data);
       if (response.ok) {
         this.setState(
-          { genratedOtp: data.GenOtp, isResendDisabled: true },
+          { genratedOtp: data.GenOtp, isResendDisabled: true, resendTimer: 30 },
           () => {
             const T = setInterval(() => {
               this.setState((prevState) => ({
