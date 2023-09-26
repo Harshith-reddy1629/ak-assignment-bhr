@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Getting Started with this Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Open your IDE terminal and run command git clone https://github.com/Harshith-reddy1629/ak-assignment-bhr.git
 
-## Available Scripts
+then <span style="color: lightgreen"> cd ak-assignment-bhr<span>
 
-In the project directory, you can run:
+now install required dependencies by running <span style="color: lightgreen"> npm install<span>
 
-### `npm start`
+To run project in your localhost:port run command<span style="color: lightgreen"> npm start <span>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+now go to browser and enter URL http://localhost:3000
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+it will be display login page as below screenshot.
 
-### `npm test`
+i have used my custom approach ,similar to AdmitKard Official site.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img src='https://res.cloudinary.com/reddyimgs/image/upload/v1695720651/Screenshot_2023-09-26_145906_sqhoho.png' alt='main page' >
 
-### `npm run build`
+it displays error messages with small text when we enter invalid inputs like characters other than numbers and less than 10 characters and empty inputs.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ex:
+<img src='https://res.cloudinary.com/reddyimgs/image/upload/v1695720976/Screenshot_2023-09-26_150549_siodkr.png' height='200'>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+It displays OTP verification screen like below image when we register with valid inputs. A notification will be displayed with an OTP at top-center of the screen
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img src='https://res.cloudinary.com/reddyimgs/image/upload/v1695720651/Screenshot_2023-09-26_145941_boijqb.png' />
 
-### `npm run eject`
+if you enter correct OTP it shows success screen.
+<img src='https://res.cloudinary.com/reddyimgs/image/upload/v1695720650/Screenshot_2023-09-26_150001_q5qzhb.png' />
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+I have built this site with responsive design across multiple devices.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src='https://res.cloudinary.com/reddyimgs/image/upload/v1695721765/Screenshot_2023-09-26_151808_cqm04m.png' width='250'>
+<img src='https://res.cloudinary.com/reddyimgs/image/upload/v1695721765/Screenshot_2023-09-26_151832_ldcicq.png' width='250'>
+<img src='https://res.cloudinary.com/reddyimgs/image/upload/v1695721764/Screenshot_2023-09-26_151902_u7xkvo.png' width='250'>
