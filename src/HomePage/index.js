@@ -40,6 +40,8 @@ class HomePage extends Component {
     genratedOtp: "",
     mobileNumber: "",
     page: pageMode.NumberPage,
+    isResendDisabled: true,
+    resendTimer: 30,
   };
 
   onOtpHandler = (event) => {
@@ -72,21 +74,49 @@ class HomePage extends Component {
 
       let data = await response.json();
       console.log(data);
-      this.setState({ genratedOtp: data.GenOtp }, () =>
+      if (response.ok) {
+        this.setState(
+          { genratedOtp: data.GenOtp, isResendDisabled: true },
+          () => {
+            const T = setInterval(() => {
+              this.setState((prevState) => ({
+                resendTimer: prevState.resendTimer - 1,
+              }));
+            }, 1000);
+            setTimeout(() => {
+              clearInterval(T);
+              this.setState({ isResendDisabled: false, resendTimer: "" });
+            }, 30000);
+            Store.addNotification({
+              title: "OTP",
+              message: `Your OTP is ${this.state.genratedOtp}`,
+              type: "info",
+              insert: "top",
+              container: "top-center",
+              animationIn: ["animate__animated", "animate__fadeIn"],
+              animationOut: ["animate__animated", "animate__fadeOut"],
+              dismiss: {
+                duration: 30000,
+                onScreen: true,
+              },
+            });
+          }
+        );
+      } else {
         Store.addNotification({
-          title: "OTP",
-          message: `Your OTP is ${this.state.genratedOtp}`,
+          title: "OOPS",
+          message: `Try Again`,
           type: "info",
           insert: "top",
           container: "top-center",
           animationIn: ["animate__animated", "animate__fadeIn"],
           animationOut: ["animate__animated", "animate__fadeOut"],
           dismiss: {
-            duration: 30000,
+            duration: 3000,
             onScreen: true,
           },
-        })
-      );
+        });
+      }
     } catch (error) {
       console.log(error);
       Store.addNotification({
@@ -171,6 +201,8 @@ class HomePage extends Component {
       otpInput,
       mobileNumber,
       page,
+      isResendDisabled,
+      resendTimer,
       //   genratedOtp,
     } = this.state;
 
@@ -230,19 +262,32 @@ class HomePage extends Component {
                   <p style={{ margin: "0", marginTop: "8px" }}>
                     Didn’t receive an OTP?
                   </p>
-                  <button
-                    onClick={this.generateOtp}
+                  <div
                     style={{
-                      backgroundColor: "transparent",
-                      border: "0",
-                      outline: "none",
-                      margin: "0",
-                      textDecorationLine: "underline",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
                     }}
-                    type="button"
                   >
-                    Resend OTP
-                  </button>
+                    <button
+                      onClick={this.generateOtp}
+                      disabled={isResendDisabled}
+                      style={{
+                        backgroundColor: "transparent",
+                        border: "0",
+                        outline: "none",
+                        margin: "0",
+                        textDecorationLine: "underline",
+                      }}
+                      type="button"
+                    >
+                      Resend OTP
+                    </button>
+                    <p style={{ fontSize: "12px" }}>
+                      {resendTimer}
+                      {!!resendTimer && "s"}
+                    </p>
+                  </div>
 
                   <button
                     onClick={this.onVerificationOtp}
