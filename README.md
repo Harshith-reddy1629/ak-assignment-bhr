@@ -23,7 +23,8 @@ it displays error messages with small text when we enter invalid inputs like cha
 ex:
 <img src='https://res.cloudinary.com/reddyimgs/image/upload/v1695720976/Screenshot_2023-09-26_150549_siodkr.png' height='200'>
 
-It displays OTP verification screen like below image when we register with valid inputs. A notification will be displayed with an OTP at top-center of the screen
+It displays OTP verification screen like below image when we register with valid inputs. A notification will be displayed with an OTP at top-center of the screen.
+I have used my Personal Api for generating OTP and Validating.
 
 <img src='https://res.cloudinary.com/reddyimgs/image/upload/v1695720651/Screenshot_2023-09-26_145941_boijqb.png' />
 
