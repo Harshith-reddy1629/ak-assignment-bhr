@@ -264,7 +264,9 @@ class HomePage extends Component {
                       if (!values.mobileNo) {
                         errors.mobileNo = "Phone number is required";
                       } else {
-                        if (!/^[0-9]/i.test(values.mobileNo)) {
+                        if (
+                          !!values.mobileNo.match(/[a-zA-Z!@# $%^&*()_=-]/g)
+                        ) {
                           errors.mobileNo = "Only 0-9 are allowed";
                         } else if (values.mobileNo.length !== 10) {
                           errors.mobileNo =
